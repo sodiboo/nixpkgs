@@ -22,11 +22,11 @@ buildGoModule rec {
 
   ldflags = [ "-s" "-w" ];
 
-  meta = with lib; {
+  meta = {
     description = "A fast, almost Gaussian Blur implementation in Go";
     homepage = "https://github.com/esimov/stackblur-go";
-    license = licenses.mit;
-    maintainers = with maintainers; [ sodiboo ];
+    license = lib.licenses.mit;
+    maintainers = with lib.maintainers; [ sodiboo ];
     mainProgram = "stackblur";
   };
 }
